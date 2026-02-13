@@ -1,0 +1,40 @@
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import './globals.css';
+import { SessionProvider } from 'next-auth/react';
+
+const inter = Inter({ subsets: ['latin'] });
+
+export const metadata: Metadata = {
+  title: 'PropTracker - Digital maintenance request management for landlord-tenant communication',
+  description: 'Value Proposition: Eliminates maintenance request chaos by providing transparent tracking, automated follow-ups, and accountability metrics that protect both landlords and tenants from disputes
+
+Target Customer: Property management companies, independent landlords with 5+ units, and tenant advocacy organizations
+
+---
+Category: Micro-SaaS
+Target Market: Property management companies, independent landlords with 5+ units, and tenant advocacy organizations
+Source Hypothesis ID: 5aff3efe-2404-4c89-9c71-2277da10e441
+Promotion Type: automatic',
+};
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
+        <SessionProvider>
+          <nav className="border-b">
+            <div className="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+              <a href="/" className="font-bold text-lg">PropTracker - Digital maintenance request management for landlord-tenant communication</a>
+              <div className="flex items-center gap-4">
+                <a href="/dashboard" className="text-sm hover:text-blue-600">Dashboard</a>
+                <a href="/pricing" className="text-sm hover:text-blue-600">Pricing</a>
+              </div>
+            </div>
+          </nav>
+          <main>{children}</main>
+        </SessionProvider>
+      </body>
+    </html>
+  );
+}
