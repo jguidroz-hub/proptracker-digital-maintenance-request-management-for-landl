@@ -7,15 +7,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'PropTracker - Digital maintenance request management for landlord-tenant communication',
-  description: 'Value Proposition: Eliminates maintenance request chaos by providing transparent tracking, automated follow-ups, and accountability metrics that protect both landlords and tenants from disputes
-
-Target Customer: Property management companies, independent landlords with 5+ units, and tenant advocacy organizations
-
----
-Category: Micro-SaaS
-Target Market: Property management companies, independent landlords with 5+ units, and tenant advocacy organizations
-Source Hypothesis ID: 5aff3efe-2404-4c89-9c71-2277da10e441
-Promotion Type: automatic',
+  description: 'Value Proposition: Eliminates maintenance request chaos by providing transparent tracking, automated',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
